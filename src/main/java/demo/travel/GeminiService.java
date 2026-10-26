@@ -33,7 +33,7 @@ public class GeminiService {
     public GeminiService(ObjectMapper mapper,
             Validator validator,
             @Value("${travel.gemini-api-key:}") String apiKey,
-            @Value("${travel.gemini-model:gemini-3.8-flash}") String model) {
+            @Value("${travel.gemini-model:gemini-3.5-flash-lite}") String model) {
         this(mapper, validator, apiKey, model, createClient());
     }
 

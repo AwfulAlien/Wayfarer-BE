@@ -9,7 +9,6 @@ spring:
     default-property-inclusion: non_null
 travel:
   gemini-api-key: ${GEMINI_API_KEY:}
-#  gemini-model: ${GEMINI_MODEL:gemini-3.8-flash}
   gemini-model: ${GEMINI_MODEL:gemini-3.5-flash-lite}
   frontend-origin: ${FRONTEND_ORIGIN:http://localhost:4200}
   guide-name: ${TRAVEL_GUIDE_NAME:Your Travel Guide}

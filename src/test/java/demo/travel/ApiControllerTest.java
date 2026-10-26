@@ -22,6 +22,7 @@ class ApiControllerTest {
       {"conversationId":"demo","message":"Plan a trip to Ooty","travelDetails":{"destination":null,"durationDays":null,"startDate":null,"endDate":null,"travellers":{"adults":0,"children":0},"departureCity":null,"budget":null,"currency":"EUR","interests":[],"travelStyle":null,"accommodationPreferences":[],"transportPreferences":[],"specialRequirements":[]}}
       """;
     @Test void healthReturnsOk() throws Exception { mvc.perform(get("/api/health")).andExpect(status().isOk()).andExpect(jsonPath("$.status").value("ok")); }
+    @Test void unknownRootPathReturnsNotFoundInsteadOfGenericServerError() throws Exception { mvc.perform(get("/")).andExpect(status().isNotFound()).andExpect(jsonPath("$.message").value("The requested resource was not found.")); }
     @Test void rejectsBlankMessage() throws Exception { mvc.perform(post("/api/chat").contentType(MediaType.APPLICATION_JSON).content(valid.replace("Plan a trip to Ooty", ""))).andExpect(status().isBadRequest()).andExpect(jsonPath("$.message").exists()); }
     @Test void rejectsInvalidCurrency() throws Exception { mvc.perform(post("/api/chat").contentType(MediaType.APPLICATION_JSON).content(valid.replace("EUR", "Euro"))).andExpect(status().isBadRequest()); }
     @Test void returnsStructuredReply() throws Exception {
