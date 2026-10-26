@@ -1,0 +1,19 @@
+server:
+  port: ${PORT:8080}
+  error:
+    include-message: never
+spring:
+  application:
+    name: travel-consultation-api
+  jackson:
+    default-property-inclusion: non_null
+travel:
+  gemini-api-key: ${GEMINI_API_KEY:}
+#  gemini-model: ${GEMINI_MODEL:gemini-3.8-flash}
+  gemini-model: ${GEMINI_MODEL:gemini-3.5-flash-lite}
+  frontend-origin: ${FRONTEND_ORIGIN:http://localhost:4200}
+  guide-name: ${TRAVEL_GUIDE_NAME:Your Travel Guide}
+  guide-whatsapp: ${TRAVEL_GUIDE_WHATSAPP:}
+  guide-email: ${TRAVEL_GUIDE_EMAIL:}
+  consultation-price: ${CONSULTATION_PRICE:9.99}
+  consultation-currency: ${CONSULTATION_CURRENCY:EUR}
