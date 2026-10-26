@@ -1,0 +1,7 @@
+.git
+.idea
+.m2repo
+target
+.env
+.env.*
+*.log

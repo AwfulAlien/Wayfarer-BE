@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: demo.travel.GeminiServiceTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.378 s -- in demo.travel.GeminiServiceTest

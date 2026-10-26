@@ -1,0 +1,6 @@
+# Created at 2026-10-26T22:47:22.862
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '[3.008s][error][attach] could not open (5) pipe \\.\pipe\javatool1987754267 to send result of operation load'.
+
+# Created at 2026-10-26T22:49:56.256
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '[156.405s][error][attach] could not open (5) pipe \\.\pipe\javatool-759813807 to send result of operation jcmd'.
+
